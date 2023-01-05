@@ -14,6 +14,10 @@
 		15CAD2202961CD5E0063DDFE /* UniversalConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CAD21F2961CD5E0063DDFE /* UniversalConverterTests.swift */; };
 		15CAD22A2961CD5E0063DDFE /* UniversalConverterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CAD2292961CD5E0063DDFE /* UniversalConverterUITests.swift */; };
 		15CAD22C2961CD5E0063DDFE /* UniversalConverterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CAD22B2961CD5E0063DDFE /* UniversalConverterUITestsLaunchTests.swift */; };
+		15CAD23A2962E8BB0063DDFE /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 15CAD2392962E8BB0063DDFE /* SwiftSoup */; };
+		15CAD23D2962E9C30063DDFE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 15CAD23C2962E9C30063DDFE /* Alamofire */; };
+		15CAD2402962F2800063DDFE /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CAD23F2962F2800063DDFE /* Currency.swift */; };
+		15CAD2422962F7100063DDFE /* Currencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CAD2412962F7100063DDFE /* Currencies.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,8 @@
 		15CAD2252961CD5E0063DDFE /* UniversalConverterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UniversalConverterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15CAD2292961CD5E0063DDFE /* UniversalConverterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversalConverterUITests.swift; sourceTree = "<group>"; };
 		15CAD22B2961CD5E0063DDFE /* UniversalConverterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversalConverterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		15CAD23F2962F2800063DDFE /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		15CAD2412962F7100063DDFE /* Currencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currencies.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15CAD23A2962E8BB0063DDFE /* SwiftSoup in Frameworks */,
+				15CAD23D2962E9C30063DDFE /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +102,7 @@
 		15CAD20D2961CD5C0063DDFE /* UniversalConverter */ = {
 			isa = PBXGroup;
 			children = (
+				15CAD23E2962F2710063DDFE /* model */,
 				15CAD20E2961CD5C0063DDFE /* UniversalConverterApp.swift */,
 				15CAD2102961CD5C0063DDFE /* ContentView.swift */,
 				15CAD2122961CD5D0063DDFE /* Assets.xcassets */,
@@ -127,6 +136,15 @@
 			path = UniversalConverterUITests;
 			sourceTree = "<group>";
 		};
+		15CAD23E2962F2710063DDFE /* model */ = {
+			isa = PBXGroup;
+			children = (
+				15CAD23F2962F2800063DDFE /* Currency.swift */,
+				15CAD2412962F7100063DDFE /* Currencies.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +161,10 @@
 			dependencies = (
 			);
 			name = UniversalConverter;
+			packageProductDependencies = (
+				15CAD2392962E8BB0063DDFE /* SwiftSoup */,
+				15CAD23C2962E9C30063DDFE /* Alamofire */,
+			);
 			productName = UniversalConverter;
 			productReference = 15CAD20B2961CD5C0063DDFE /* UniversalConverter.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +237,10 @@
 				Base,
 			);
 			mainGroup = 15CAD2022961CD5C0063DDFE;
+			packageReferences = (
+				15CAD2382962E8BB0063DDFE /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+				15CAD23B2962E9C30063DDFE /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 15CAD20C2961CD5C0063DDFE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,7 +283,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15CAD2402962F2800063DDFE /* Currency.swift in Sources */,
 				15CAD2112961CD5C0063DDFE /* ContentView.swift in Sources */,
+				15CAD2422962F7100063DDFE /* Currencies.swift in Sources */,
 				15CAD20F2961CD5C0063DDFE /* UniversalConverterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -577,6 +605,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		15CAD2382962E8BB0063DDFE /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		15CAD23B2962E9C30063DDFE /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		15CAD2392962E8BB0063DDFE /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 15CAD2382962E8BB0063DDFE /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+		15CAD23C2962E9C30063DDFE /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 15CAD23B2962E9C30063DDFE /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 15CAD2032961CD5C0063DDFE /* Project object */;
 }
